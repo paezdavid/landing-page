@@ -1,0 +1,428 @@
+/* font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif; */
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --darkGray: hsl(0, 0%, 55%);
+    --veryDarkGray: hsl(0, 0%, 41%);
+    --toCenterWidth: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 15px;
+    line-height: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Main es el contenedor de la imagen de portada que cubre 100% el width del viewport */
+main {
+    background-image: url(images/desktop/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+}
+
+/* toCenter es un div de referencia para centrar todo el contenido */
+.toCenter {
+    margin: 0 auto;
+    max-width: var(--toCenterWidth);
+    width: 100%;
+}
+
+/* Header donde se encuentran el logo y el menú de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 1rem;
+}
+
+nav a {
+    font-family: 'Alata', sans-serif;
+    color: var(--white);
+    margin-right: 2rem;
+    text-decoration: none;
+    padding-bottom: .4rem;
+    width: 100%;
+    height: 100%;
+}
+
+nav a:hover {
+    box-shadow: 0px 20px 0px -11px white;
+    border-bottom: 0;
+    z-index: 5;
+}
+
+
+
+/* estilos del h1 (texto principal de la portada) */
+.heroDiv {
+    display: flex;
+    align-items: center;
+    height: 530px;
+    padding: 0 2rem;
+}
+
+.h1Box {
+    max-width: 600px;
+    width: 100%;
+    padding: 3rem 1.8rem 2rem;
+    border: 2px solid white;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 4.3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* Segunda sección, breve info de la web con una imagen al lado */
+.infoContainer {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 8.5rem 2rem;
+} 
+
+.info {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    z-index: 5;
+    background-color: var(--white);
+    padding: 6rem 1rem 0 6rem;
+    height: auto;
+    max-width: 600px;
+}
+
+.mobile-info-img {
+    display: none;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.8rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.125rem;
+    font-family: 'Alata', sans-serif;
+    line-height: 1.5;
+}
+
+/* "OUR CREATIONS" GRID SECTION */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.seeAllBtn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Alata', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border: 1px solid black;
+}
+
+.seeAllBtn:hover {
+    background: black;
+    color: white;
+    transition-duration: .2s;
+}
+
+.media-query-seeAllBtn {
+    display: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Alata', sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border: 1px solid black;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 450px 450px;
+    grid-gap: 20px;
+    padding: 3rem 2rem 4rem 2rem;
+}
+
+.gridContainer a {
+    display: grid;
+}
+
+
+/* Estilos para todas las secciones del grid  */
+.box {
+    color: white;
+    position: relative;
+    box-shadow: 0px 0px 80px 7px rgb(26, 26, 26) inset;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.box:hover {
+    box-shadow: 0px 0px 400px 50px white inset;
+    color: black;
+}
+
+h3 {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* GRID BACKGROUND IMAGES */
+.box1 {background-image: url(images/desktop/image-deep-earth.jpg);}
+.box2 {background-image: url(images/desktop/image-night-arcade.jpg);}
+.box3 {background-image: url(images/desktop/image-soccer-team.jpg);}
+.box4 {background-image: url(images/desktop/image-grid.jpg);}
+.box5 {background-image: url(images/desktop/image-from-above.jpg);}
+.box6 {background-image: url(images/desktop/image-pocket-borealis.jpg);}
+.box7 {background-image: url(images/desktop/image-curiosity.jpg);}
+.box8 {background-image: url(images/desktop/image-fisheye.jpg);}
+
+
+/* Footer */
+
+footer {
+    background-color: black;
+}
+
+.footerSectionsContainer {
+    display: flex;
+    height: auto;
+    padding: 2.2rem 2rem;
+}
+
+.footerSectionsContainer section {
+    height: auto;
+    width: 50%;
+}
+
+/* Logo and footer navigation section */
+.footer-logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-nav a {
+    font-family: 'Alata', sans-serif;
+    color: var(--white);
+    margin-right: 2rem;
+    text-decoration: none;
+    padding-bottom: .4rem;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Social media links section */
+.socialMedia-section div {
+    text-align: right;
+}
+
+.socialMedia-links {
+    margin-bottom: 1.5rem;
+}
+
+.socialMedia-links a {
+    margin-right: .7rem;
+}
+
+.copyright {
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+
+    main {
+        background-image: url(images/mobile/image-hero.jpg);
+        padding-top: 1.7rem;
+    }
+
+    .heroDiv {
+        justify-content: center;
+    }
+
+    
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .infoContainer {
+        position: initial;
+        flex-direction: column;
+        align-items: initial;
+        padding: 7rem 2rem;
+    }
+
+    .mobile-info-img {
+        display: inline;
+    }
+
+    .desktop-info-img {
+        display: none;
+    }
+
+    .info {
+        position: initial;
+        padding: 4rem 2rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: initial;
+    }
+
+    .title a {
+        display: none;
+    }
+
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 180px);
+        grid-gap: 25px;
+        padding: 4rem 2rem 3rem 2rem;
+    }
+
+    .box1 {background-image: url(images/mobile/image-deep-earth.jpg);}
+    .box2 {background-image: url(images/mobile/image-night-arcade.jpg);}
+    .box3 {background-image: url(images/mobile/image-soccer-team.jpg);}
+    .box4 {background-image: url(images/mobile/image-grid.jpg);}
+    .box5 {background-image: url(images/mobile/image-from-above.jpg);}
+    .box7 {background-image: url(images/mobile/image-pocket-borealis.jpg);}
+    .box8 {background-image: url(images/mobile/image-curiosity.jpg);}
+    .box6 {background-image: url(images/mobile/image-fisheye.jpg);}
+
+
+    .media-query-btn-container {
+        max-height: 100px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+
+    .media-query-seeAllBtn {
+        display: inline;
+    }
+
+    /* FOOTER STYLES*/
+    .footerSectionsContainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footerSectionsContainer section {
+        text-align: center;
+        width: 100%;
+    }
+
+    .socialMedia-section div {
+        text-align: center;
+    }
+
+    .footer-nav a {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .infoContainer {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 370px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {font-size: 1.8rem;}
+    h3 {font-size: 1.5rem;}
+
+    .copyright p {
+        font-size: .6rem;
+    }
+}
