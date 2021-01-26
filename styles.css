@@ -1,11 +1,8 @@
-/* font-family: 'Alata', sans-serif;
-font-family: 'Josefin Sans', sans-serif; */
 
+/*  ###########################################################################
+    Estilos generales para toda la página
+*/
 :root {
-    --white: hsl(0, 0%, 100%);
-    --black: hsl(0, 0%, 0%);
-    --darkGray: hsl(0, 0%, 55%);
-    --veryDarkGray: hsl(0, 0%, 41%);
     --toCenterWidth: 1200px;
 }
 
@@ -19,6 +16,12 @@ html {
     height: 100%;
     font-size: 15px;
     line-height: 1;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
 }
 
 img {
@@ -31,7 +34,8 @@ img {
     height: 100%;
 }
 
-/* Main es el contenedor de la imagen de portada que cubre 100% el width del viewport */
+/*  ###############################################################################
+    Main es el contenedor de la imagen de portada que cubre 100% el width del viewport */
 main {
     background-image: url(images/desktop/image-hero.jpg);
     background-position: center;
@@ -41,14 +45,14 @@ main {
     height: 600px;
 }
 
-/* toCenter es un div de referencia para centrar todo el contenido */
+/* toCenter es un div de referencia que sirve para centrar cada sección */
 .toCenter {
     margin: 0 auto;
     max-width: var(--toCenterWidth);
     width: 100%;
 }
 
-/* Header donde se encuentran el logo y el menú de navegación */
+/* Header donde se encuentran el logo y el nav*/
 header {
     display: flex;
     justify-content: space-between;
@@ -57,9 +61,10 @@ header {
     padding: 0 1rem;
 }
 
+/* Links de navegación */
 nav a {
     font-family: 'Alata', sans-serif;
-    color: var(--white);
+    color: white;
     margin-right: 2rem;
     text-decoration: none;
     padding-bottom: .4rem;
@@ -74,8 +79,67 @@ nav a:hover {
 }
 
 
+/* ###############################################################################
+    MOBILE MENU STYLES */
+.open-btn {
+    display: none;
+}
 
-/* estilos del h1 (texto principal de la portada) */
+.mobile-menu {
+    transform: translateX(100%);
+    transition: .3s;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 2rem 1rem;
+    z-index: 10;
+}
+
+/* Class que se añade con JS para abrir el menú desde un móvil */
+.open-menu {
+    transform: translateX(0%);
+    transition: .3s;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+/* botón para cerrar el menú mobile */
+.close-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Links de navegación del menú mobile */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80%;
+}
+
+.mobile-nav a {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-decoration: none;
+    margin-bottom: 1.7rem;
+}
+
+
+
+/* ###############################################################################
+    Estilos del texto principal de la primera sección de la página */
 .heroDiv {
     display: flex;
     align-items: center;
@@ -91,7 +155,7 @@ nav a:hover {
 }
 
 h1 {
-    color: var(--white);
+    color: white;
     font-size: 4.3rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -99,7 +163,8 @@ h1 {
 }
 
 
-/* Segunda sección, breve info de la web con una imagen al lado */
+/*  ###############################################################################
+    Segunda sección, breve info de la web con una imagen al lado */
 .infoContainer {
     position: relative;
     display: flex;
@@ -112,12 +177,13 @@ h1 {
     right: 0;
     top: 45%;
     z-index: 5;
-    background-color: var(--white);
+    background-color: white;
     padding: 6rem 1rem 0 6rem;
     height: auto;
     max-width: 600px;
 }
 
+/* imagen para la versión móvil */
 .mobile-info-img {
     display: none;
 }
@@ -135,7 +201,8 @@ p {
     line-height: 1.5;
 }
 
-/* "OUR CREATIONS" GRID SECTION */
+/*  ###############################################################################
+    "OUR CREATIONS" -- Sección del GRID */
 .title {
     display: flex;
     justify-content: space-between;
@@ -159,6 +226,7 @@ p {
     transition-duration: .2s;
 }
 
+/* Botón "See All" para la versión móvil */
 .media-query-seeAllBtn {
     display: none;
     text-decoration: none;
@@ -170,6 +238,7 @@ p {
     border: 1px solid black;
 }
 
+/* Grid */
 .gridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -183,7 +252,7 @@ p {
 }
 
 
-/* Estilos para todas las secciones del grid  */
+/* Estilos generales para todas las secciones del grid  */
 .box {
     color: white;
     position: relative;
@@ -220,7 +289,8 @@ h3 {
 .box8 {background-image: url(images/desktop/image-fisheye.jpg);}
 
 
-/* Footer */
+/*  ###############################################################################
+    Footer */
 
 footer {
     background-color: black;
@@ -237,14 +307,14 @@ footer {
     width: 50%;
 }
 
-/* Logo and footer navigation section */
+/* Sección donde se encuentra el logo y los links de nav  */
 .footer-logo {
     margin-bottom: 1.5rem;
 }
 
 .footer-nav a {
     font-family: 'Alata', sans-serif;
-    color: var(--white);
+    color: white;
     margin-right: 2rem;
     text-decoration: none;
     padding-bottom: .4rem;
@@ -256,7 +326,7 @@ footer {
     text-decoration: underline;
 }
 
-/* Social media links section */
+/* Sección donde se encuentran los links a redes sociales */
 .socialMedia-section div {
     text-align: right;
 }
@@ -280,7 +350,8 @@ footer {
 
 
 
-/* MEDIA QUERIES */
+/*  ###############################################################################
+    MEDIA QUERIES */
 
 @media (max-width: 1000px) {
 
@@ -293,16 +364,25 @@ footer {
         justify-content: center;
     }
 
-    
 
     h1 {
         font-size: 3.6rem;
     }
 
+    /* Ocultar la navegación de escritorio */
     nav {
         display: none;
     }
 
+    /* Mostrar el botón para abrir la navegación móvil */
+    .open-btn {
+        display: initial;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Cambios en el posicionamiento de la segunda sección */
     .infoContainer {
         position: initial;
         flex-direction: column;
@@ -310,14 +390,17 @@ footer {
         padding: 7rem 2rem;
     }
 
+    /* Se muestra la imagen de versión móvil */
     .mobile-info-img {
         display: inline;
     }
 
+    /* Oculta la imagen de versión de desktop */
     .desktop-info-img {
         display: none;
     }
 
+    /* Cambia el posicionamiento de la info de la segunda sección */
     .info {
         position: initial;
         padding: 4rem 2rem;
@@ -329,18 +412,19 @@ footer {
         font-size: 2.8rem;
     }
 
-
+    /* Cambios de posicionamiento en seccion "Our Creations */
     .title {
         display: flex;
         justify-content: center;
         align-items: initial;
     }
 
+    /* Se oculta el botón "See All" */
     .title a {
         display: none;
     }
 
-
+    /* Se cambia el estilo del grid */
     .gridContainer {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 180px);
@@ -357,7 +441,7 @@ footer {
     .box8 {background-image: url(images/mobile/image-curiosity.jpg);}
     .box6 {background-image: url(images/mobile/image-fisheye.jpg);}
 
-
+    /* Se posiciona el botón "See All" abajo del grid */
     .media-query-btn-container {
         max-height: 100px;
         height: 100%;
@@ -366,6 +450,7 @@ footer {
         margin-bottom: 4rem;
     }
 
+    /* Se muestra el botón "See All" */
     .media-query-seeAllBtn {
         display: inline;
     }
@@ -394,6 +479,7 @@ footer {
 }
 
 
+/* ############################################################################### */
 @media (max-width: 500px) {
 
 
@@ -414,6 +500,7 @@ footer {
     }
 }
 
+/* ############################################################################### */
 @media (max-width: 370px) {
     h1 {
         font-size: 2.4rem;
